@@ -1,0 +1,28 @@
+# Unreal Engine
+Binaries/
+DerivedDataCache/
+Intermediate/
+Saved/
+Build/
+.vs/
+*.sln
+*.vcxproj
+*.user
+*.suo
+*.opensdf
+*.sdf
+
+# Archives Manuelles (Git remplace cela)
+*.rar
+*.zip
+*.7z
+
+# Obsidian
+.obsidian/workspace
+.obsidian/workspace-mobile
+.obsidian/cache
+.trash/
+
+# OS
+Thumbs.db
+Desktop.ini

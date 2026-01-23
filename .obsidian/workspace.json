@@ -1,0 +1,253 @@
+{
+  "main": {
+    "id": "92b2ea06261b43a2",
+    "type": "split",
+    "children": [
+      {
+        "id": "e7d65b874f69b321",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "a6e28a44d8d6c40a",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "L3_Technical/AI_Guard.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "AI_Guard"
+            }
+          },
+          {
+            "id": "575a8b23b89c338f",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "L1_Strategy/Roadmap.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "Roadmap"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "ae007074ec664ef0",
+    "type": "split",
+    "children": [
+      {
+        "id": "72912c9267ddaa8b",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "6dc89dc641df91ec",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {
+                "sortOrder": "alphabetical",
+                "autoReveal": false
+              },
+              "icon": "lucide-folder-closed",
+              "title": "Files"
+            }
+          },
+          {
+            "id": "7825d085927fdf5a",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              },
+              "icon": "lucide-search",
+              "title": "Search"
+            }
+          },
+          {
+            "id": "6680c4ef68d9248b",
+            "type": "leaf",
+            "state": {
+              "type": "bookmarks",
+              "state": {},
+              "icon": "lucide-bookmark",
+              "title": "Bookmarks"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 405.5
+  },
+  "right": {
+    "id": "b153d7b0d4ed501b",
+    "type": "split",
+    "children": [
+      {
+        "id": "617adeb6aa9f9da4",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "efa63b8a15bae650",
+            "type": "leaf",
+            "state": {
+              "type": "bases",
+              "state": {
+                "file": "Untitled 2.base",
+                "viewName": "Table"
+              },
+              "icon": "lucide-table",
+              "title": "Untitled 2"
+            }
+          },
+          {
+            "id": "32b10a7dadf04dea",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "file": "L3_Technical/AI_Guard.md",
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-coming-in",
+              "title": "Backlinks for AI_Guard"
+            }
+          },
+          {
+            "id": "0f410eeea09e4114",
+            "type": "leaf",
+            "state": {
+              "type": "outgoing-link",
+              "state": {
+                "linksCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-going-out",
+              "title": "Outgoing links"
+            }
+          },
+          {
+            "id": "f82690486452e1ec",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": true,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-tags",
+              "title": "Tags"
+            }
+          },
+          {
+            "id": "a4a2e8e17cc6720e",
+            "type": "leaf",
+            "state": {
+              "type": "all-properties",
+              "state": {
+                "sortOrder": "frequency",
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-archive",
+              "title": "All properties"
+            }
+          },
+          {
+            "id": "697e7b4677493ea4",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "followCursor": false,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-list",
+              "title": "Outline"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300
+  },
+  "left-ribbon": {
+    "hiddenItems": {
+      "switcher:Open quick switcher": false,
+      "graph:Open graph view": false,
+      "canvas:Create new canvas": false,
+      "daily-notes:Open today's daily note": false,
+      "templates:Insert template": false,
+      "command-palette:Open command palette": false,
+      "bases:Create new base": false
+    }
+  },
+  "active": "a6e28a44d8d6c40a",
+  "lastOpenFiles": [
+    "L1_Strategy/ADR/ADR_2026-01-22_No_Time_Estimates.md",
+    "L3_Technical/Plans/ProtoReadyPack/Module_01_Footstep/[Plan]_Footstep_Implementation_2026-01-22_1540.md",
+    "L3_Technical/Plans/ProtoReadyPack/Module_01_Footstep",
+    "Templates/PR_Module_Template/HOW_TO_USE.md",
+    "Templates/PR_Module_Template",
+    "L2_Design/ProtoReadyPack/Modules/[Brnst]_Footstep_Module_2026-01-22.md",
+    "L2_Design/ProtoReadyPack/Modules",
+    "L2_Design/ProtoReadyPack/Shared_Standards.md",
+    "L2_Design/ProtoReadyPack/Pack_Vision.md",
+    "L3_Execution/Plans/ProtoReadyPack/Phase_02_Architecture/[Plan]_Phase2_Implementation_2026-01-22_1450.md",
+    "L3_Technical/Plans/ProtoReadyPack/Phase_02_Architecture/[Plan]_Phase2_Implementation_2026-01-22_1450.md",
+    "L3_Technical/Plans/ProtoReadyPack/[Plan]_Master_2026-01-22_1345.md",
+    "L3_Technical/Plans/ProtoReadyPack/Phase_02_Architecture",
+    "L3_Technical/Plans/ProtoReadyPack",
+    "L3_Technical/Plans",
+    "L3_Technical/AI_Guard.md",
+    "Untitled 2.canvas",
+    "L5_Knowledge/Research/[Rsch].md",
+    "L1_Strategy/Roadmap.md",
+    "L5_Knowledge/Research/Pratiques de Gouvernance Multi‑Agent pour l’__Agentic Command Center__ (ACC).pdf",
+    "Untitled 2.base",
+    "L3_Execution/Plans/ProtoReadyPack/Phase_02_Architecture",
+    "L2_Design/ProtoReadyPack/[Arch]_Phase2_PackArchitecture_2026-01-22.md",
+    "L5_Knowledge/Research/[Rsch]_Fab_Marketplace_Publication_2026-01-22.md",
+    "L5_Knowledge/Research/[Rsch]_Statut_Juridique_Vendeur_France_2026-01-22.md",
+    "Views/Guide_Obsidian_Filters.md",
+    "Untitled.canvas",
+    "Z_INBOX/_Index.md",
+    "Home.md",
+    "L5_Knowledge/Research/ProtoReadyPack_Brainstorm.md",
+    "L2_Design/ProtoReadyPack",
+    "L4_Operations/Reports/[Report]_Expanded_Pack_Strategy_2026-01-22_1325.md",
+    "L4_Operations/Reports/[Report]_Market_Strategic_Options_2026-01-22_1250.md",
+    "L4_Operations/Reports/[Report]_ProtoReady_Pack_Vision_2026-01-22_1240.md",
+    "L4_Operations/Reports/[Report]_Interface_Monitoring_Analysis_2026-01-22_1141.md",
+    "L4_Operations/Reports/[Report]_Governance_Diagnostic_2026-01-21_1841.md",
+    "L4_Operations/Reports/[Report]_Obsidian_Visualization_2026-01-21_1835.md",
+    "L4_Operations/Reports/[Report]_Production_Readiness_2026-01-21_1532.md",
+    "Map.canvas",
+    "Untitled 1.canvas"
+  ]
+}

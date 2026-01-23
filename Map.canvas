@@ -1,0 +1,25 @@
+{
+	"nodes":[
+		{"id":"l0","type":"file","file":"L0_Intent/_Index.md","x":-600,"y":-450,"width":250,"height":150,"color":"1"},
+		{"id":"l1","type":"file","file":"L1_Strategy/_Index.md","x":-300,"y":-450,"width":250,"height":150,"color":"2"},
+		{"id":"l2","type":"file","file":"L2_Design/_Index.md","x":0,"y":-450,"width":250,"height":150,"color":"3"},
+		{"id":"l3","type":"file","file":"L3_Technical/_Index.md","x":300,"y":-450,"width":250,"height":150,"color":"4"},
+		{"id":"l4","type":"file","file":"L4_Operations/_Index.md","x":-450,"y":450,"width":250,"height":150,"color":"5"},
+		{"id":"l5","type":"file","file":"L5_Knowledge/_Index.md","x":-150,"y":450,"width":250,"height":150},
+		{"id":"l6","type":"file","file":"L6_Radar/_Index.md","x":150,"y":450,"width":250,"height":150},
+		{"id":"lw","type":"file","file":"Lω_Agentic/_Index.md","x":600,"y":0,"width":250,"height":200,"color":"6"},
+		{"id":"inbox","type":"file","file":"Z_INBOX/_Index.md","x":-700,"y":0,"width":200,"height":150},
+		{"id":"home","type":"file","file":"Home.md","x":-50,"y":0,"width":400,"height":300,"color":"6"}
+	],
+	"edges":[
+		{"id":"e1","fromNode":"home","fromSide":"top","toNode":"l0","toSide":"bottom"},
+		{"id":"e2","fromNode":"home","fromSide":"top","toNode":"l1","toSide":"bottom"},
+		{"id":"e3","fromNode":"home","fromSide":"top","toNode":"l2","toSide":"bottom"},
+		{"id":"e4","fromNode":"home","fromSide":"top","toNode":"l3","toSide":"bottom"},
+		{"id":"e5","fromNode":"home","fromSide":"bottom","toNode":"l4","toSide":"top"},
+		{"id":"e6","fromNode":"home","fromSide":"bottom","toNode":"l5","toSide":"top"},
+		{"id":"e7","fromNode":"home","fromSide":"bottom","toNode":"l6","toSide":"top"},
+		{"id":"e8","fromNode":"home","fromSide":"right","toNode":"lw","toSide":"left"},
+		{"id":"e9","fromNode":"inbox","fromSide":"right","toNode":"home","toSide":"left","label":"promote"}
+	]
+}
