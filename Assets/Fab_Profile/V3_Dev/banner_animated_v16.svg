@@ -66,15 +66,14 @@
 
   <!-- COMPLEX CIRCUITRY LAYER -->
   
-  <!-- 1. LEFT INPUTS (Symmetrical) -->
+  <!-- 1. LEFT INPUTS (3 parallel lines converging) -->
   <g stroke="#00add8" stroke-width="2.5" fill="none" opacity="0.8" filter="url(#glowCyan)">
-      <!-- Mid Input (Main Power) -->
-      <path d="M -100 288 L 105 288" /> 
-      
-      <!-- Top Input Branch -->
-      <path d="M -50 258 L 50 258 L 75 288" stroke-width="1.5" opacity="0.6"/> 
-      <!-- Bot Input Branch -->
-      <path d="M -50 318 L 50 318 L 75 288" stroke-width="1.5" opacity="0.6"/> 
+      <!-- Top Input Branch (parallel then converge) -->
+      <path d="M -100 258 L 50 258 L 75 288" stroke-width="1.5" opacity="0.6"/> 
+      <!-- Mid Input (straight horizontal) -->
+      <path d="M -100 288 L 105 288" stroke-width="2.5" />
+      <!-- Bot Input Branch (parallel then converge) -->
+      <path d="M -100 318 L 50 318 L 75 288" stroke-width="1.5" opacity="0.6"/> 
   </g>
 
   <!-- 2. OUTPUTS & BRANCHING -->
@@ -106,7 +105,7 @@
   <!-- ANIMATIONS (Lasers & Impact) -->
   
   <!-- CONCENTRIC RINGS (Ripple around DXV) -->
-  <g fill="none" stroke="#00efff" stroke-width="1" opacity="0.1">
+  <g fill="none" stroke="#00efff" stroke-width="1" opacity="0.2">
       <!-- Ring 1 -->
       <circle cx="190" cy="270" r="70">
           <animate attributeName="r" values="70;75;70" dur="3s" repeatCount="indefinite" />
@@ -141,17 +140,6 @@
       </circle>
   </g>
 
-  <!-- Laser 1b: Input Top (SUBTLE) -->
-  <path d="M -50 258 L 50 258 L 75 288" stroke="white" stroke-width="1.5" stroke-opacity="0.6" fill="none" stroke-linecap="round" filter="url(#glowCyan)" 
-        stroke-dasharray="40 200" stroke-dashoffset="240">
-      <animate attributeName="stroke-dashoffset" from="240" to="-40" dur="2.5s" begin="0.2s" repeatCount="indefinite" />
-  </path>
-
-  <!-- Laser 1c: Input Bot (SUBTLE) -->
-  <path d="M -50 318 L 50 318 L 75 288" stroke="white" stroke-width="1.5" stroke-opacity="0.6" fill="none" stroke-linecap="round" filter="url(#glowCyan)" 
-        stroke-dasharray="40 200" stroke-dashoffset="240">
-      <animate attributeName="stroke-dashoffset" from="240" to="-40" dur="2.5s" begin="0.4s" repeatCount="indefinite" />
-  </path>
 
   <!-- Laser 2: X-Output Path -->
   <path d="M 260 230 L 280 210 L 350 210 L 380 180 L 410 210 L 450 210 L 1950 210" 
@@ -168,18 +156,18 @@
 
   <!-- Typography -->
   
-  <!-- DXV Title -->
+  <!-- DXV Title (Solid Cyan) -->
   <text x="100" y="290" font-family="'JetBrains Mono', 'Consolas', monospace" font-size="96" font-weight="900" fill="#00efff" filter="url(#textGlow)" letter-spacing="-4">DXV</text>
   
-  <!-- ::SYSTEMS (font-size 27) -->
+  <!-- ::SYSTEMS (TIGHTER and BLINKING SLOWER) -->
   <text x="280" y="275" font-family="'JetBrains Mono', 'Consolas', monospace" font-size="27" font-weight="500" fill="#a8b2bf">
     <tspan fill="#6b7785">
-      ::<animate attributeName="opacity" values="1;0.2;1" dur="1s" repeatCount="indefinite"/>
-      <animate attributeName="fill" values="#6b7785;#ffffff;#6b7785" dur="1s" repeatCount="indefinite"/> 
+      ::<animate attributeName="opacity" values="1;0.4;1" dur="3s" repeatCount="indefinite"/>
+      <animate attributeName="fill" values="#6b7785;#ffffff;#6b7785" dur="3s" repeatCount="indefinite"/> 
     </tspan>
     <tspan fill="#a8b2bf">
-      SYSTEMS<animate attributeName="opacity" values="1;0.5;1" dur="1s" repeatCount="indefinite"/>
-      <animate attributeName="fill" values="#a8b2bf;#d0e0f0;#a8b2bf" dur="1s" repeatCount="indefinite"/>
+      SYSTEMS<animate attributeName="opacity" values="1;0.6;1" dur="3s" repeatCount="indefinite"/>
+      <animate attributeName="fill" values="#a8b2bf;#d0e0f0;#a8b2bf" dur="3s" repeatCount="indefinite"/>
     </tspan>
   </text>
   
@@ -188,16 +176,16 @@
   <!-- Box 1: "Solid" (Orange) -->
   <rect x="97" y="312" width="48" height="18" fill="#ff8c00" opacity="0.6" rx="2" />
   
-  <!-- Box 2: "Fluid" (Cyan) -->
-  <rect x="253" y="312" width="48" height="18" fill="#00efff" opacity="0.7" rx="2" />
+  <!-- Box 2: "Fluid" (Cyan) - Recentered -->
+  <rect x="261" y="312" width="50" height="18" fill="#00efff" opacity="0.7" rx="2" />
 
   <text x="100" y="325" font-family="'JetBrains Mono', 'Consolas', monospace" font-size="14" fill="#c0cce0" letter-spacing="1">
-    <tspan fill="#070a0f" font-weight="bold">Solid</tspan> foundations. <tspan fill="#070a0f" font-weight="bold">Fluid</tspan> experiences.
+    <tspan fill="#d0d8e0" font-weight="bold">Solid</tspan> foundations. <tspan fill="#d0d8e0" font-weight="bold">Fluid</tspan> experiences.
   </text>
 
-  <!-- Rust Syntax (Match/Dropdown Style) -->
+  <!-- Sub-slogan (Rust-style function calls) -->
   <text x="130" y="355" font-family="'JetBrains Mono', 'Consolas', monospace" font-size="12" fill="#4a5568" opacity="0.6">
-    <tspan fill="#ff8c00">match</tspan> Ready <tspan fill="#6b7785">{</tspan> Audio <tspan fill="#00efff">✓</tspan>, Design <tspan fill="#00efff">✓</tspan>, Tools <tspan fill="#00efff">✓</tspan> <tspan fill="#6b7785">}</tspan>
+    <tspan fill="#ff8c00">Design</tspan><tspan fill="#6b7785">();</tspan>   <tspan fill="#ff8c00">Observe</tspan><tspan fill="#6b7785">();</tspan>   <tspan fill="#ff8c00">Iterate</tspan><tspan fill="#6b7785">();</tspan>
   </text>
 
   <!-- Particles -->
