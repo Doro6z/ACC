@@ -1,0 +1,213 @@
+<svg width="1920" height="540" viewBox="0 0 1920 540" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <!-- Background Gradient -->
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#070a0f;stop-opacity:1" />
+      <stop offset="50%" style="stop-color:#0b1016;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#070a0f;stop-opacity:1" />
+    </linearGradient>
+    
+    <!-- Glow Filters -->
+    <filter id="glowCyan" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur in="SourceGraphic" stdDeviation="3" result="blur"/>
+      <feFlood flood-color="#00efff" flood-opacity="0.9"/>
+      <feComposite in2="blur" operator="in" result="glow"/>
+      <feMerge>
+        <feMergeNode in="glow"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+    
+    <filter id="glowOrange" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur in="SourceGraphic" stdDeviation="2.5" result="blur"/>
+      <feFlood flood-color="#ff8c00" flood-opacity="0.8"/>
+      <feComposite in2="blur" operator="in" result="glow"/>
+      <feMerge>
+        <feMergeNode in="glow"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+
+    <!-- Strong Pulse Glow (Laser) -->
+    <filter id="laserGlow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur in="SourceGraphic" stdDeviation="4" result="blur"/>
+      <feFlood flood-color="#ffffff" flood-opacity="1"/>
+      <feComposite in2="blur" operator="in" result="glow"/>
+      <feMerge>
+        <feMergeNode in="glow"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+
+    <filter id="textGlow">
+      <feGaussianBlur in="SourceGraphic" stdDeviation="5" result="blur"/>
+      <feFlood flood-color="#00d9ff" flood-opacity="0.6"/>
+      <feComposite in2="blur" operator="in" result="glow"/>
+      <feMerge>
+        <feMergeNode in="glow"/>
+        <feMergeNode in="glow"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1920" height="540" fill="url(#bgGrad)"/>
+  
+  <!-- Data Bus Background -->
+  <g opacity="0.1" transform="translate(0, 40)">
+    <line x1="0" y1="260" x2="1920" y2="260" stroke="#00efff" stroke-width="0.8"/>
+    <line x1="0" y1="265" x2="1920" y2="265" stroke="#00efff" stroke-width="0.8"/>
+    <line x1="0" y1="270" x2="1920" y2="270" stroke="#ff8c00" stroke-width="0.8" opacity="0.6"/>
+    <line x1="0" y1="275" x2="1920" y2="275" stroke="#00efff" stroke-width="0.8"/>
+    <line x1="0" y1="280" x2="1920" y2="280" stroke="#00efff" stroke-width="0.8"/>
+    <animateTransform attributeName="transform" type="scale" values="1 1; 1 1.05; 1 1" dur="8s" repeatCount="indefinite" additive="sum"/>
+  </g>
+
+  <!-- COMPLEX CIRCUITRY LAYER -->
+  
+  <!-- 1. LEFT INPUTS (Symmetrical) -->
+  <g stroke="#00add8" stroke-width="2.5" fill="none" opacity="0.8" filter="url(#glowCyan)">
+      <!-- Mid Input (Main Power) -->
+      <path d="M -100 288 L 105 288" /> 
+      
+      <!-- Top Input Branch -->
+      <path d="M -50 258 L 50 258 L 75 288" stroke-width="1.5" opacity="0.6"/> 
+      <!-- Bot Input Branch -->
+      <path d="M -50 318 L 50 318 L 75 288" stroke-width="1.5" opacity="0.6"/> 
+  </g>
+
+  <!-- 2. OUTPUTS & BRANCHING -->
+  <g stroke="#00add8" stroke-width="1.5" fill="none" stroke-linecap="round" stroke-linejoin="round" opacity="0.5" filter="url(#glowCyan)">
+    
+    <!-- PATH A: D-Bottom Exit -> Splits -->
+    <path id="pathA" d="M 120 335 L 120 360 L 160 380 L 250 380 L 280 400 L 600 400" stroke-width="2" />
+    <path d="M 280 400 L 300 420 L 450 420" stroke-opacity="0.3"/> 
+
+    <!-- PATH B: X-Top Exit -->
+    <path id="pathB" d="M 260 230 L 280 210 L 350 210 L 380 180 L 410 210 L 450 210 L 1950 210" />
+    
+    <!-- Branch: Early Horizontal Split -->
+    <path d="M 280 210 L 330 210 L 350 230 L 400 230" stroke-opacity="0.3"/> 
+
+    <!-- Branch: Upper Complex branching from ECG Peak -->
+    <path d="M 380 180 L 400 150 L 550 150 L 600 120" stroke-opacity="0.3"/>
+    
+    <!-- Orange Branches (Complex) -->
+    <g stroke="#ff8c00" filter="url(#glowOrange)" opacity="0.6">
+        <!-- Main Orange Stem -->
+        <path d="M 450 210 L 500 240 L 700 240" />
+        <!-- Orange Sub-branches -->
+        <path d="M 550 240 L 580 260 L 650 260" stroke-width="1" opacity="0.7"/>
+        <path d="M 680 240 L 700 220 L 750 220" stroke-width="1" opacity="0.7"/>
+    </g>
+  </g>
+
+  <!-- ANIMATIONS (Lasers & Impact) -->
+  
+  <!-- CONCENTRIC RINGS (Ripple around DXV) -->
+  <g fill="none" stroke="#00efff" stroke-width="1" opacity="0.1">
+      <!-- Ring 1 -->
+      <circle cx="190" cy="270" r="70">
+          <animate attributeName="r" values="70;75;70" dur="3s" repeatCount="indefinite" />
+          <animate attributeName="opacity" values="0.1;0.25;0.1" dur="3s" repeatCount="indefinite" />
+          <animate attributeName="stroke" values="#00efff;#ffffff;#00efff" dur="3s" repeatCount="indefinite" />
+      </circle>
+      <!-- Ring 2 -->
+      <circle cx="190" cy="270" r="85">
+          <animate attributeName="r" values="85;90;85" dur="3s" begin="0.2s" repeatCount="indefinite" />
+          <animate attributeName="opacity" values="0.1;0.25;0.1" dur="3s" begin="0.2s" repeatCount="indefinite" />
+          <animate attributeName="stroke" values="#00efff;#ffffff;#00efff" dur="3s" begin="0.2s" repeatCount="indefinite" />
+      </circle>
+      <!-- Ring 3 -->
+      <circle cx="190" cy="270" r="100">
+          <animate attributeName="r" values="100;105;100" dur="3s" begin="0.4s" repeatCount="indefinite" />
+          <animate attributeName="opacity" values="0.1;0.3;0.1" dur="3s" begin="0.4s" repeatCount="indefinite" />
+      </circle>
+      <!-- Ring 4 -->
+      <circle cx="190" cy="270" r="115">
+          <animate attributeName="r" values="115;120;115" dur="3s" begin="0.6s" repeatCount="indefinite" />
+          <animate attributeName="opacity" values="0.1;0.3;0.1" dur="3s" begin="0.6s" repeatCount="indefinite" />
+      </circle>
+       <!-- Ring 5 -->
+      <circle cx="190" cy="270" r="130">
+          <animate attributeName="r" values="130;135;130" dur="3s" begin="0.8s" repeatCount="indefinite" />
+          <animate attributeName="opacity" values="0.05;0.2;0.05" dur="3s" begin="0.8s" repeatCount="indefinite" />
+      </circle>
+       <!-- Ring 6 -->
+      <circle cx="190" cy="270" r="145">
+          <animate attributeName="r" values="145;150;145" dur="3s" begin="1s" repeatCount="indefinite" />
+           <animate attributeName="opacity" values="0.05;0.2;0.05" dur="3s" begin="1s" repeatCount="indefinite" />
+      </circle>
+  </g>
+
+  <!-- Laser 1b: Input Top (SUBTLE) -->
+  <path d="M -50 258 L 50 258 L 75 288" stroke="white" stroke-width="1.5" stroke-opacity="0.6" fill="none" stroke-linecap="round" filter="url(#glowCyan)" 
+        stroke-dasharray="40 200" stroke-dashoffset="240">
+      <animate attributeName="stroke-dashoffset" from="240" to="-40" dur="2.5s" begin="0.2s" repeatCount="indefinite" />
+  </path>
+
+  <!-- Laser 1c: Input Bot (SUBTLE) -->
+  <path d="M -50 318 L 50 318 L 75 288" stroke="white" stroke-width="1.5" stroke-opacity="0.6" fill="none" stroke-linecap="round" filter="url(#glowCyan)" 
+        stroke-dasharray="40 200" stroke-dashoffset="240">
+      <animate attributeName="stroke-dashoffset" from="240" to="-40" dur="2.5s" begin="0.4s" repeatCount="indefinite" />
+  </path>
+
+  <!-- Laser 2: X-Output Path -->
+  <path d="M 260 230 L 280 210 L 350 210 L 380 180 L 410 210 L 450 210 L 1950 210" 
+        stroke="white" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round" filter="url(#laserGlow)"
+        stroke-dasharray="150 2000" stroke-dashoffset="2150">
+      <animate attributeName="stroke-dashoffset" from="2150" to="-2000" dur="3s" begin="0.1s" repeatCount="indefinite" />
+  </path>
+
+  <!-- Laser 3: Orange Branch Pulse -->
+  <path d="M 450 210 L 500 240 L 700 240" stroke="#ffeb3b" stroke-width="1.5" fill="none" stroke-linecap="round" filter="url(#laserGlow)"
+        stroke-dasharray="40 500" stroke-dashoffset="540">
+      <animate attributeName="stroke-dashoffset" from="540" to="0" dur="4s" begin="1.2s" repeatCount="indefinite" />
+  </path>
+
+  <!-- Typography -->
+  
+  <!-- DXV Title -->
+  <text x="100" y="290" font-family="'JetBrains Mono', 'Consolas', monospace" font-size="96" font-weight="900" fill="#00efff" filter="url(#textGlow)" letter-spacing="-4">DXV</text>
+  
+  <!-- ::SYSTEMS (font-size 27) -->
+  <text x="280" y="275" font-family="'JetBrains Mono', 'Consolas', monospace" font-size="27" font-weight="500" fill="#a8b2bf">
+    <tspan fill="#6b7785">
+      ::<animate attributeName="opacity" values="1;0.2;1" dur="1s" repeatCount="indefinite"/>
+      <animate attributeName="fill" values="#6b7785;#ffffff;#6b7785" dur="1s" repeatCount="indefinite"/> 
+    </tspan>
+    <tspan fill="#a8b2bf">
+      SYSTEMS<animate attributeName="opacity" values="1;0.5;1" dur="1s" repeatCount="indefinite"/>
+      <animate attributeName="fill" values="#a8b2bf;#d0e0f0;#a8b2bf" dur="1s" repeatCount="indefinite"/>
+    </tspan>
+  </text>
+  
+  <!-- Slogan Styling -->
+  
+  <!-- Box 1: "Solid" (Orange) -->
+  <rect x="97" y="312" width="48" height="18" fill="#ff8c00" opacity="0.6" rx="2" />
+  
+  <!-- Box 2: "Fluid" (Cyan) -->
+  <rect x="253" y="312" width="48" height="18" fill="#00efff" opacity="0.7" rx="2" />
+
+  <text x="100" y="325" font-family="'JetBrains Mono', 'Consolas', monospace" font-size="14" fill="#c0cce0" letter-spacing="1">
+    <tspan fill="#070a0f" font-weight="bold">Solid</tspan> foundations. <tspan fill="#070a0f" font-weight="bold">Fluid</tspan> experiences.
+  </text>
+
+  <!-- Rust Syntax (Match/Dropdown Style) -->
+  <text x="130" y="355" font-family="'JetBrains Mono', 'Consolas', monospace" font-size="12" fill="#4a5568" opacity="0.6">
+    <tspan fill="#ff8c00">match</tspan> Ready <tspan fill="#6b7785">{</tspan> Audio <tspan fill="#00efff">✓</tspan>, Design <tspan fill="#00efff">✓</tspan>, Tools <tspan fill="#00efff">✓</tspan> <tspan fill="#6b7785">}</tspan>
+  </text>
+
+  <!-- Particles -->
+  <g opacity="0.4">
+     <circle cx="1200" cy="180" r="1.5" fill="#00efff">
+      <animate attributeName="cx" from="1200" to="1920" dur="8s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="600" cy="400" r="1" fill="#ff8c00">
+      <animate attributeName="cx" from="600" to="1500" dur="12s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="0.3;0.8;0.3" dur="5s" repeatCount="indefinite"/>
+    </circle>
+  </g>
+</svg>
